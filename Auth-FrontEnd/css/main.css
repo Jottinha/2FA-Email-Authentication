@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../assets/imagemFundo.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.form-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(217, 217, 217, 0.2);
+    border: 2px solid #F2E9E9;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    height: 400px;
+    width: 400px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+
+.input_content {
+    margin: 30px;
+    position: relative;
+    width: 300px;
+    border-bottom: 2px solid #fff;
+}
+
+.input_content input{
+    background-color: transparent;
+    border: none;
+    outline: 0;
+    color: #fff;
+    width: 93%;
+}
+
+.input_content input::placeholder{
+    color: #fff;
+}
+
+
+#icon_password:hover {
+    cursor: pointer;
+}
+
+.second_content button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 40px;
+    height: 40px;
+    border: none;
+    margin-bottom: 50px;
+}
+
+.register{
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    font-weight: 600;
+}
+
+.register a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+
+
+  
+
+  
+  
+  
+  

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth</title>
+    <link rel="stylesheet" type="text/css" href="/Auth-FrontEnd/css/main.css" />
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="form-box">
+        <section class="first_content">
+            <h1>Login</h1>
+            
+            <div class="input_content">
+                <input type="text" name="email" id="email_input" placeholder="Email" autocomplete="off">
+                <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="input_content">
+                <!-- <ion-icon name="eye-outline"></ion-icon> -->
+                <input type="password" name="password" id="Password_input"  placeholder="Password">
+                <ion-icon id="icon_password" name="eye-off-outline" onclick="trocandoIcone()"></ion-icon>
+            </div>
+        </section>
+
+        <section class="second_content">
+            <button>Login</button>
+
+            <div class="register">
+                <p>Don't have a account <a href="#">Register</a></p>
+            </div>
+        </section>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -41,7 +41,7 @@ User log in page
 
 - [x] Login screen where users can enter their email and password to access the system.
 
-- [ ] Function to check if e-mail and password exist.
+- [ ] Function to check in back-end if e-mail and password exist.
 - [x] Animte sing in button
 
   

@@ -35,18 +35,21 @@ User authentication email
 - [ ] Create methods to verify if e-mail exist in DataBase.
 - [ ] Create methods to verify if login from Front-end are correct.
 - [ ] Create methods to send an e-mail authentication to the user.
-- [ ] 
 ## Technologies Used
 
   
 ### Front-End
-- HTML, CSS, and JavaScript for the front-end implementation.
+<div>
+ <img aling="center" alt="joao-html" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+ <img aling="center" alt="joao-css" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+ <img aling="center" alt="joao-javascript" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+</div>
 
 ### Back-End
-
-- Java e Spring Boot for the back-end implementation.
-
-  
+<div>
+ <img aling="center" alt="joao-java" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg">
+ <img aling="center" alt="joao-spring" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg">
+</div>
 
 ## How to Run the Project
 

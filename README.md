@@ -48,11 +48,9 @@ User log in page
 
 User authentication page
 
-- [ ] Create authentication page in html.
+- [x] Create authentication page in html.
 
 - [ ] Style css to the html authentication page
-
-- [ ] Create funtion to send e-mail and password to back-end.
 
 ### Back-End
 

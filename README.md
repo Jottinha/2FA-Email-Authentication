@@ -1,5 +1,5 @@
 
-# 2FA(two-factor authentication)
+# 2FA (two-factor authentication)
 
 This is a personal study project to create an email authentication system, including registration and login screens. The goal is to develop both the front-end and back-end of the system. 
  
@@ -9,20 +9,21 @@ This is a personal study project to create an email authentication system, inclu
 ## Implemented Features and Next Steps
 
   ### Front-End
-User registration
+User registration page
 - [x] User registration screen where users can enter their email, and password.
 - [x] Validation for a valid email address during the registration process.
 - [x] Validation for matching passwords during the registration process.
-- [ ] Function that sends to the email to check if it already exists in DataBase.
-- [ ] Function to send the email and password to back-end.
+- [ ] Function that sends to back the email to check if it already exists in DataBase.
+- [ ] Function to send the new email and password to back-end.
 - [ ] Check if the password entry is null.
 - [ ] Animate sign up button
+- [ ] Function that send email to back and receive the code that user need informe.
 
-User log in
+User log in page
 - [x] Login screen where users can enter their email and password to access the system.
-- [ ] Function to check if e-mail and password are correct.
+- [ ] Function to check if e-mail and password exist.
 
-User authentication email
+User authentication page
 - [ ] Create authentication page in html.
 - [ ] Style css to the html authentication page 
 - [ ] Create funtion to send e-mail and password to back-end.

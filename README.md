@@ -2,7 +2,10 @@
 # Email Authentication Project
 
 This is a personal study project to create an email authentication system, including registration and login screens. The goal is to develop both the front-end and back-end of the system. 
-  
+ 
+<img src="https://github.com/Jottinha/auth/assets/69482936/0c332a9e-89a4-4d14-a79d-ac8553ccdb83" alt="Log in page" width="300" height="300">
+<img src="https://github.com/Jottinha/auth/assets/69482936/9437f239-a953-4dad-8df3-b90177b41a80" alt="Sing up page" width="300" height="300">
+
 ## Implemented Features and Next Steps
 
   ### Front-End

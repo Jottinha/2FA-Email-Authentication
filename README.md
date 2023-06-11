@@ -1,5 +1,5 @@
 
-# Email Authentication Project
+# 2FA(two-factor authentication)
 
 This is a personal study project to create an email authentication system, including registration and login screens. The goal is to develop both the front-end and back-end of the system. 
  

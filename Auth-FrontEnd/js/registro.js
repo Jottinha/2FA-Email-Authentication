@@ -2,7 +2,7 @@ function verificaRegistro(){
     if (verificaEmail()){
         if (verificaSenha()){
             document.querySelector("p#mensagem_erro").innerHTML = "";
-            //chama dunção para mandar para o back o email e a senha  
+            //chama função para mandar para o back o email e a senha  
         }else{
             document.querySelector("p#mensagem_erro").innerHTML = "Senhas não conferem"
         }

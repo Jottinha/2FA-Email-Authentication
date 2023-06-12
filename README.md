@@ -21,13 +21,25 @@ User registration page
 User log in page
 
 - [x] Login screen where users can enter their email and password to access the system.
+<<<<<<< HEAD
 - [ ] Function to check if e-mail and password exist.
+=======
+
+- [ ] Function to check in back-end if e-mail and password exist.
+>>>>>>> 6e40e4af3abfb4e313ad56d6dc97201c29f2a988
 - [x] Animte sing in button
 
 User authentication page
+<<<<<<< HEAD
 - [x] Create authentication page in html.
 - [x] Style css to the html authentication page
 - [ ] Create funtion to send e-mail and password to back-end.
+=======
+
+- [x] Create authentication page in html.
+
+- [ ] Style css to the html authentication page
+>>>>>>> 6e40e4af3abfb4e313ad56d6dc97201c29f2a988
 
 ### Back-End
 - [ ] Create MVC Java project with Spring Boot.
@@ -68,4 +80,10 @@ Contributions to this project are welcome. If you find any issues, have suggesti
 
 ## License
 
+<<<<<<< HEAD
 This project is licensed under the [MIT License](LICENSE).
+=======
+  
+
+This project is licensed under the [MIT License](LICENSE).
+>>>>>>> 6e40e4af3abfb4e313ad56d6dc97201c29f2a988

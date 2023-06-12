@@ -34,9 +34,9 @@ User authentication page
 - [ ] Create funtion to send e-mail and password to back-end.
 
 ### Back-End
-- [ ] Create MVC Java project with Spring Boot.
-- [ ] Create a RESTful aplication.
-- [ ] Create a class that should be used to save user information.
+- [x] Create MVC Java project with Spring Boot.
+- [x] Create a RESTful aplication.
+- [x] Create a class that should be used to save user information.
 - [ ] Create class to receve information from Front-End.
 - [ ] Create methods to verify if e-mail exist in DataBase.
 - [ ] Create methods to verify if login from Front-end are correct.

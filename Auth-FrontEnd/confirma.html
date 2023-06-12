@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirma</title>
+    <script src="js/confirma.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Auth-FrontEnd/css/confirma.css" />
+</head>
+<body>
+    <div class="box">
+        <div class="content">
+            <h1>Verificação</h1>
+            <section class="numbers_content">
+                <input type="text" id="first_number" class="number_input" maxlength="1" oninput="validarNumero(this, 'second_numebr')">
+                <input type="text" id="second_numebr" class="number_input" maxlength="1" oninput="validarNumero(this, 'third_number')" onkeydown="apagarNumero(this, event)">
+                <input type="text" id="third_number" class="number_input" maxlength="1" oninput="validarNumero(this, 'fourth_number')" onkeydown="apagarNumero(this, event)">
+                <input type="text" id="fourth_number" class="number_input" maxlength="1" oninput="validarNumero(this)" onkeydown="apagarNumero(this, event)">
+            </section>
+            
+            <section class="final_content">
+                <button class="number_verify">Verificar</button>   
+            </section>
+        </div>
+    </div>
+</body>
+</html>

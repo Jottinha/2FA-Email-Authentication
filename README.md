@@ -1,3 +1,6 @@
+
+  
+
 # 2FA (two-factor authentication)
 
 This is a personal study project to create an email authentication system, including registration and login screens. The goal is to develop both the front-end and back-end of the system.
@@ -6,6 +9,7 @@ This is a personal study project to create an email authentication system, inclu
 <img  src="https://github.com/Jottinha/auth/assets/69482936/9437f239-a953-4dad-8df3-b90177b41a80"  alt="Sing up page"  width="300"  height="300">
 
 ## Implemented Features and Next Steps
+
 ### Front-End
 User registration page
 
@@ -21,25 +25,13 @@ User registration page
 User log in page
 
 - [x] Login screen where users can enter their email and password to access the system.
-<<<<<<< HEAD
 - [ ] Function to check if e-mail and password exist.
-=======
-
-- [ ] Function to check in back-end if e-mail and password exist.
->>>>>>> 6e40e4af3abfb4e313ad56d6dc97201c29f2a988
 - [x] Animte sing in button
 
 User authentication page
-<<<<<<< HEAD
 - [x] Create authentication page in html.
 - [x] Style css to the html authentication page
 - [ ] Create funtion to send e-mail and password to back-end.
-=======
-
-- [x] Create authentication page in html.
-
-- [ ] Style css to the html authentication page
->>>>>>> 6e40e4af3abfb4e313ad56d6dc97201c29f2a988
 
 ### Back-End
 - [ ] Create MVC Java project with Spring Boot.
@@ -80,10 +72,4 @@ Contributions to this project are welcome. If you find any issues, have suggesti
 
 ## License
 
-<<<<<<< HEAD
 This project is licensed under the [MIT License](LICENSE).
-=======
-  
-
-This project is licensed under the [MIT License](LICENSE).
->>>>>>> 6e40e4af3abfb4e313ad56d6dc97201c29f2a988

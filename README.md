@@ -41,6 +41,7 @@ User authentication page
 - [ ] Create methods to verify if e-mail exist in DataBase.
 - [ ] Create methods to verify if login from Front-end are correct.
 - [ ] Create methods to send an e-mail authentication to the user.
+- [x] Config swagger in back-end.
 
 ## Technologies Used
 
@@ -62,9 +63,9 @@ User authentication page
 
 1. Clone this repository to your local machine.
 
-2. Open the `index.html` file in your browser to access the login screen.
+2. Open the `index.html`, `confirma.html` and `registro.html` file in your browser to access the login, register and confirm screen.
 
-3. Interact with the login and registration screens to test the implemented features so far.
+3. Open http://localhost:8080/swagger-ui/index.html after start back-end to acces swagger documentation.
 
 ## Contribution
 

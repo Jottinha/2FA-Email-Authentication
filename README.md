@@ -35,13 +35,13 @@ User authentication page
 
 ### Back-End
 - [x] Create MVC Java project with Spring Boot.
-- [x] Create a RESTful aplication.
 - [x] Create a class that should be used to save user information.
-- [ ] Create class to receve information from Front-End.
-- [ ] Create methods to verify if e-mail exist in DataBase.
+- [x] Create class to receve information from Front-End.
+- [x] Create methods to verify if e-mail exist in DataBase.
 - [ ] Create methods to verify if login from Front-end are correct.
 - [ ] Create methods to send an e-mail authentication to the user.
 - [x] Config swagger in back-end.
+- [x] Create encryption to save passwords in dataBase.
 
 ## Technologies Used
 

@@ -7,7 +7,7 @@ public class PasswordEncryption {
         return BCrypt.hashpw(password, BCrypt.gensalt());
     }
 
-    public boolean checkEncryptedPassword(String typedPassword, String dataPassword){
-        return BCrypt.checkpw(typedPassword, dataPassword);
+    public boolean checkEncryptedPassword(String inputPassword, String dataPassword){
+        return BCrypt.checkpw(inputPassword, dataPassword);
     }
 }

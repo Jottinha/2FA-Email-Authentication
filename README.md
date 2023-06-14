@@ -13,35 +13,31 @@ This is a personal study project to create an email authentication system, inclu
 ### Front-End
 User registration page
 
-- [x] User registration screen where users can enter their email, and password.
+- [x] User registration screen where users can enter their email and password.
 - [x] Validation for a valid email address during the registration process.
 - [x] Validation for matching passwords during the registration process.
-- [ ] Function that sends to back the email to check if it already exists in DataBase.
-- [ ] Function to send the new email and password to back-end.
 - [x] Check if the password entry is null.
 - [x] Animate sign up button
-- [ ] Function that send email to back and receive the code that user need informe.
+- [ ] Function to try to register the new user using the post method.
 
 User log in page
-
 - [x] Login screen where users can enter their email and password to access the system.
-- [ ] Function to check if e-mail and password exist.
 - [x] Animte sing in button
+- [ ] Function to try to login the user using the get method.
 
 User authentication page
 - [x] Create authentication page in html.
 - [x] Style css to the html authentication page
-- [ ] Create funtion to send e-mail and password to back-end.
+- [ ] Function that checks if the user input code matches the sent email code
+
 
 ### Back-End
 - [x] Create MVC Java project with Spring Boot.
-- [x] Create a class that should be used to save user information.
-- [x] Create class to receve information from Front-End.
-- [x] Create methods to verify if e-mail exist in DataBase.
-- [ ] Create methods to verify if login from Front-end are correct.
-- [ ] Create methods to send an e-mail authentication to the user.
+- [x] Create a user class and make the relation dataBase.
+- [x] Create API to contact with front-end.
 - [x] Config swagger in back-end.
 - [x] Create encryption to save passwords in dataBase.
+- [ ] Create methods to send an e-mail authentication to the user.
 
 ## Technologies Used
 

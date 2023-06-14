@@ -23,7 +23,7 @@ User registration page
 User log in page
 - [x] Login screen where users can enter their email and password to access the system.
 - [x] Animte sing in button
-- [ ] Function to try to login the user using the get method.
+- [ ] Function to try to login the user using the post method.
 - [ ] Call authentication page after log in.
 
 User authentication page
@@ -38,7 +38,7 @@ User authentication page
 - [x] Create API to contact with front-end.
 - [x] Config swagger in back-end.
 - [x] Create encryption to save passwords in dataBase.
-- [ ] Create methods to send an e-mail authentication to the user.
+- [x] Create methods to send an e-mail authentication to the user.
 
 ## Technologies Used
 

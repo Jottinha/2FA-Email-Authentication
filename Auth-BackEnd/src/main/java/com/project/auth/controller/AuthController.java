@@ -4,6 +4,7 @@ import com.project.auth.model.PasswordEncryption;
 import com.project.auth.model.User;
 import com.project.auth.model.UserFactory;
 import com.project.auth.repository.UsuarioRepository;
+import com.project.auth.services.EmailService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -26,6 +27,9 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class AuthController {
     @Autowired
     UsuarioRepository userData;
+    @Autowired
+    private EmailService senderService;
+
     @ApiOperation("Get all users")
     @GetMapping("/usuarios")
     @ApiResponses({
@@ -59,7 +63,7 @@ public class AuthController {
     }
 
     @PostMapping("/usuarios/login/")
-    public ResponseEntity<String> getUserByEmail(@RequestBody User loginUser){
+    public ResponseEntity<User> checkLogin(@RequestBody User loginUser){
         Optional<User> userFound = userData.findByEmail(loginUser.getEmail());
         if (!userFound.isPresent()){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -67,9 +71,17 @@ public class AuthController {
         if (!new PasswordEncryption().checkEncryptedPassword(loginUser.getPassword(), userFound.get().getPassword())){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+        return new ResponseEntity<User>(loginUser,HttpStatus.FOUND);
+    }
 
-        //TODO: make a method to send a email code to user
-        return new ResponseEntity<>("Email code", HttpStatus.FOUND);
+    @PostMapping("/usuarios/autenticacao/")
+    public ResponseEntity<String> sendEmailVerification(@RequestBody User userEmail){
+
+        String code = senderService.sendEmail(userEmail.getEmail());
+        if (code.equals("")){
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+        return new ResponseEntity<String>(code, HttpStatus.OK);
     }
 
     @ApiOperation("Create a new user")

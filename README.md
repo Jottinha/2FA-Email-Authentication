@@ -24,6 +24,7 @@ User log in page
 - [x] Login screen where users can enter their email and password to access the system.
 - [x] Animte sing in button
 - [ ] Function to try to login the user using the get method.
+- [ ] Call authentication page after log in.
 
 User authentication page
 - [x] Create authentication page in html.

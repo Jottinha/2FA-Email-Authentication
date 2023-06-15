@@ -2,7 +2,7 @@ package com.project.auth.controller;
 
 import com.project.auth.model.PasswordEncryption;
 import com.project.auth.model.User;
-import com.project.auth.model.UserFactory;
+import com.project.auth.model.UserBuilder;
 import com.project.auth.repository.UsuarioRepository;
 import com.project.auth.services.EmailService;
 import io.swagger.annotations.Api;
@@ -10,7 +10,6 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,8 +21,9 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 @RestController
 @RequestMapping(value = "/api/v1")
-@Api(tags = "Usuários")
+@Api(tags = "users")
 @CrossOrigin(origins = "*")
+@SuppressWarnings("unused")
 public class AuthController {
     @Autowired
     UsuarioRepository userData;
@@ -31,7 +31,7 @@ public class AuthController {
     private EmailService senderService;
 
     @ApiOperation("Get all users")
-    @GetMapping("/usuarios")
+    @GetMapping("/users")
     @ApiResponses({
             @ApiResponse(code = 200, message = "There is no user"),
             @ApiResponse(code = 404, message = "There are users")
@@ -45,24 +45,30 @@ public class AuthController {
             long id = userToLink.getId();
             userToLink.add(linkTo(methodOn(AuthController.class).getUser(id)).withSelfRel());
         }
-        return new ResponseEntity<List<User>>(user, HttpStatus.OK);
+        return new ResponseEntity<>(user, HttpStatus.OK);
     }
     @ApiOperation("Get users by id")
     @ApiResponses({
             @ApiResponse(code = 200, message = "Users successfully found"),
             @ApiResponse(code = 404, message = "Users not found")
     })
-    @GetMapping("/usuarios/{id}")
+    @GetMapping("/users/{id}")
     public ResponseEntity<User> getUser(@PathVariable(value = "id") long id){
-        Optional<User> usuarioId = userData.findById(id);
-        if (!usuarioId.isPresent()){
+        Optional<User> userId = userData.findById(id);
+        if (!userId.isPresent()){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        usuarioId.get().add(linkTo(methodOn(AuthController.class).getAllUsers()).withRel("usuarios"));
-        return new ResponseEntity<User>(usuarioId.get(), HttpStatus.FOUND);
+        userId.get().add(linkTo(methodOn(AuthController.class).getAllUsers()).withRel("users"));
+        return new ResponseEntity<>(userId.get(), HttpStatus.FOUND);
     }
 
-    @PostMapping("/usuarios/login/")
+    @ApiOperation("Check if login exist in Data")
+    @ApiResponses({
+            @ApiResponse(code = 302, message = "Users successfully found"),
+            @ApiResponse(code = 404, message = "Users not found")
+    })
+    @PostMapping("/users/login/")
+    @SuppressWarnings("unused")
     public ResponseEntity<User> checkLogin(@RequestBody User loginUser){
         Optional<User> userFound = userData.findByEmail(loginUser.getEmail());
         if (!userFound.isPresent()){
@@ -71,17 +77,23 @@ public class AuthController {
         if (!new PasswordEncryption().checkEncryptedPassword(loginUser.getPassword(), userFound.get().getPassword())){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<User>(loginUser,HttpStatus.FOUND);
+        return new ResponseEntity<>(loginUser,HttpStatus.FOUND);
     }
 
-    @PostMapping("/usuarios/autenticacao/")
+    @ApiOperation("Send code verification to email user and receive the code")
+    @ApiResponses({
+            @ApiResponse(code = 302, message = "Users successfully found"),
+            @ApiResponse(code = 500, message = "Unable to send an email")
+    })
+    @PostMapping("/users/authentication/")
+    @SuppressWarnings("unused")
     public ResponseEntity<String> sendEmailVerification(@RequestBody User userEmail){
 
         String code = senderService.sendEmail(userEmail.getEmail());
         if (code.equals("")){
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
-        return new ResponseEntity<String>(code, HttpStatus.OK);
+        return new ResponseEntity<>(code, HttpStatus.OK);
     }
 
     @ApiOperation("Create a new user")
@@ -89,19 +101,20 @@ public class AuthController {
             @ApiResponse(code = 200, message = "User create successfully"),
             @ApiResponse(code = 404, message = "User was not created successfully")
     })
-    @PostMapping("/usuarios/salvar")
+    @PostMapping("/users/save")
+    @SuppressWarnings("unused")
     public ResponseEntity<User> postUser(@RequestBody User newUser){
 
-        boolean usuarioExiste = userData.existsByEmail(newUser.getEmail());
+        boolean userExist = userData.existsByEmail(newUser.getEmail());
 
-        if (usuarioExiste){
+        if (userExist){
             return new ResponseEntity<>(HttpStatus.CONFLICT);
         }
 
-        User userSave = new UserFactory().userSaveFactory(newUser);
+        User userSave = new UserBuilder().userSaveFactory(newUser);
         userData.save(userSave);
 
-        return new ResponseEntity<User>(userSave , HttpStatus.OK);
+        return new ResponseEntity<>(userSave , HttpStatus.OK);
     }
 
 }

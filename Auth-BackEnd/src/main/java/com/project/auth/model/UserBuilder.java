@@ -1,6 +1,6 @@
 package com.project.auth.model;
 
-public class UserFactory {
+public class UserBuilder {
     public User userSaveFactory(User user){
         User newUser = new User();
         newUser.setEmail(user.getEmail());

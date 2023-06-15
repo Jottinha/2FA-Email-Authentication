@@ -63,37 +63,26 @@ public class AuthController {
     }
 
     @ApiOperation("Check if login exist in Data")
-    @ApiResponses({
-            @ApiResponse(code = 302, message = "Users successfully found"),
-            @ApiResponse(code = 404, message = "Users not found")
-    })
     @PostMapping("/users/login/")
     @SuppressWarnings("unused")
-    public ResponseEntity<User> checkLogin(@RequestBody User loginUser){
+    public boolean checkLogin(@RequestBody User loginUser){
         Optional<User> userFound = userData.findByEmail(loginUser.getEmail());
-        if (!userFound.isPresent()){
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        if (!userFound.isPresent() || !new PasswordEncryption().checkEncryptedPassword(loginUser.getPassword(), userFound.get().getPassword())){
+            return false;
         }
-        if (!new PasswordEncryption().checkEncryptedPassword(loginUser.getPassword(), userFound.get().getPassword())){
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-        return new ResponseEntity<>(loginUser,HttpStatus.FOUND);
+        return true;
     }
 
     @ApiOperation("Send code verification to email user and receive the code")
-    @ApiResponses({
-            @ApiResponse(code = 302, message = "Users successfully found"),
-            @ApiResponse(code = 500, message = "Unable to send an email")
-    })
     @PostMapping("/users/authentication/")
     @SuppressWarnings("unused")
-    public ResponseEntity<String> sendEmailVerification(@RequestBody User userEmail){
+    public String sendEmailVerification(@RequestBody User userEmail){
 
         String code = senderService.sendEmail(userEmail.getEmail());
         if (code.equals("")){
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+            return "";
         }
-        return new ResponseEntity<>(code, HttpStatus.OK);
+        return code;
     }
 
     @ApiOperation("Create a new user")

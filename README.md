@@ -25,13 +25,16 @@ User registration page
 User log in page
 - [x] Login screen where users can enter their email and password to access the system.
 - [x] Animte sing in button
-- [ ] Function to try to login the user using the post method.
-- [ ] Call authentication page after log in.
+- [x] Function to try to login using the post method.
+- [x] Call authentication page after login.
+- [ ] New Animation in email and password box to help user see login failed.
 
 User authentication page
 - [x] Create authentication page in html.
-- [x] Style css to the html authentication page
-- [ ] Function that checks if the user input code matches the sent email code
+- [x] Style css to the html authentication page.
+- [x] Function that checks if the user input code matches the sent email code.
+- [x] Function that send a request to the back-end to send an email.
+- [ ] Create a confirm text or a new page to show on screen that user made login.
 
 
 ### Back-End

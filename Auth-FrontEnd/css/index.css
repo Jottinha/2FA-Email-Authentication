@@ -70,7 +70,6 @@ h1 {
     border-radius: 40px;
     height: 40px;
     border: none;
-    margin-bottom: 50px;
 }
 
 .second_content button:hover{
@@ -90,6 +89,18 @@ a {
 .register a:hover {
     text-decoration: underline;
     color: black;
+}
+
+.errado {
+    width: 100%;
+    color: rgb(255, 0, 0);
+    position: relative;
+}
+
+.second_content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 

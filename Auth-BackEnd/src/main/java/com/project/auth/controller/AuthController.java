@@ -67,6 +67,7 @@ public class AuthController {
     @SuppressWarnings("unused")
     public boolean checkLogin(@RequestBody User loginUser){
         Optional<User> userFound = userData.findByEmail(loginUser.getEmail());
+
         if (!userFound.isPresent() || !new PasswordEncryption().checkEncryptedPassword(loginUser.getPassword(), userFound.get().getPassword())){
             return false;
         }
@@ -86,24 +87,20 @@ public class AuthController {
     }
 
     @ApiOperation("Create a new user")
-    @ApiResponses({
-            @ApiResponse(code = 200, message = "User create successfully"),
-            @ApiResponse(code = 404, message = "User was not created successfully")
-    })
     @PostMapping("/users/save")
     @SuppressWarnings("unused")
-    public ResponseEntity<User> postUser(@RequestBody User newUser){
+    public boolean postUser(@RequestBody User newUser){
 
         boolean userExist = userData.existsByEmail(newUser.getEmail());
 
         if (userExist){
-            return new ResponseEntity<>(HttpStatus.CONFLICT);
+            return false;
         }
 
         User userSave = new UserBuilder().userSaveFactory(newUser);
         userData.save(userSave);
 
-        return new ResponseEntity<>(userSave , HttpStatus.OK);
+        return true;
     }
 
 }

@@ -20,7 +20,8 @@ User registration page
 - [x] Validation for matching passwords during the registration process.
 - [x] Check if the password entry is null.
 - [x] Animate sign up button
-- [ ] Function to try to register the new user using the post method.
+- [x] Function to try to register the new user using the post method.
+- [ ] New Animation in email and password box to help user see register failed.
 
 User log in page
 - [x] Login screen where users can enter their email and password to access the system.

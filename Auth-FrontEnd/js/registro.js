@@ -1,8 +1,13 @@
-function verificaRegistro(){
+async function verificaRegistro(){
     if (verificaEmail()){
         if (verificaSenha()){
-            document.querySelector("p#mensagem_erro").innerHTML = "";
-            //chama função para mandar para o back o email e a senha  
+            var resultadoCadastro = await cadastrandoUsuario();
+            
+            if (resultadoCadastro === true){
+                document.querySelector("p#mensagem_erro").innerHTML = "Cadastrado";
+            }else{
+                mensagemErro("Email já cadastrado");
+            }
         }
     }
 }
@@ -44,4 +49,30 @@ function eValidoEmail(email){
 
 function mensagemErro(mensagemErro){
     document.querySelector("p#mensagem_erro").innerHTML = mensagemErro;
+}
+
+async function cadastrandoUsuario(){
+    var emailInput = document.querySelector("input#email_input").value;
+    var senhaInput = document.querySelector("input#Password_input").value;
+
+    try {
+        const user = {
+            email: emailInput,
+            password: senhaInput
+        };
+
+        const response = await fetch ('http://localhost:8080/api/v1/users/save/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        });
+
+        return await response.json();
+
+    } catch (error) {
+        console.error('Ocorreu um erro:', error);
+    }
+
 }

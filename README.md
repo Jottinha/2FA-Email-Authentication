@@ -21,14 +21,12 @@ User registration page
 - [x] Check if the password entry is null.
 - [x] Animate sign up button
 - [x] Function to try to register the new user using the post method.
-- [ ] New Animation in email and password box to help user see register failed.
 
 User log in page
 - [x] Login screen where users can enter their email and password to access the system.
 - [x] Animte sing in button
 - [x] Function to try to login using the post method.
 - [x] Call authentication page after login.
-- [ ] New Animation in email and password box to help user see login failed.
 
 User authentication page
 - [x] Create authentication page in html.

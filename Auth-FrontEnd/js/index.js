@@ -12,6 +12,43 @@ function trocandoIcone(){
 
 }
 
+function verificaRegistro(){
+    if (verificaEmail()){
+        if (verificaSenha()){
+            mensagemErro("");
+            verificandoLogin();
+        }
+    }
+}
+
+function verificaSenha(){
+    var senha = document.querySelector("input#Password_input").value;
+
+    var temConteudo = (senha !== "") ? true : false;
+
+    if (temConteudo){
+        return true;
+    }
+    mensagemErro("Senha não pode estar vazia");
+    return false;
+}
+
+function verificaEmail(){
+    var email = document.querySelector("input#email_input").value;
+    return eValidoEmail(email);
+}
+
+function eValidoEmail(email){
+    var regex = /^[\w.-]+@[a-zA-Z_-]+(?:\.[a-zA-Z]+)+$/;
+    var eValido = regex.test(email);
+
+    if (eValido){
+        return true;
+    }
+    mensagemErro("Email invalido")
+    return false;
+}
+
 async function verificandoLogin(){
     try{
         const loginUser = {
@@ -37,6 +74,7 @@ async function verificandoLogin(){
             mensagemErro('Usuário ou senha incorretos');    
           }
     }catch(error){
+        mensagemErro('Ocorreu um erro, tente mais tarde');   
         console.error('Ocorreu um erro:', error);
     }
 }

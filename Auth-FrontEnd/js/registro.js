@@ -32,8 +32,6 @@ function verificaSenha(){
 function verificaEmail(){
     var email = document.querySelector("input#email_input").value;
     return eValidoEmail(email);
-    //condição e metodo que busca email no back
-
 }
 
 function eValidoEmail(email){

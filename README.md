@@ -64,13 +64,17 @@ User authentication page
 
 1. Clone this repository to your local machine.
 
-2. Open the `index.html`, `confirma.html` and `registro.html` file in your browser to access the login, register and confirm screen.
+2. Open the `index.html`, `confirma.html` and `registro.html` file that is present in Auth-FrontEnd folter and open in your browser to access the login and register screen.
 
-3. Open http://localhost:8080/swagger-ui/index.html after start back-end to acces swagger documentation.
+3. Open Auth-BackEnd folder and run the back-end Java, the database is the h2, so you don't need worry about conection.
+
+4. You need to alter the properties of the file in the back-end with the email and password that will be the host that will send the emails. **(You need to setup app password in your email to use.)**
+
+5. Open http://localhost:8080/swagger-ui/index.html after start back-end to acces swagger documentation.
 
 ## Contribution
 
-Contributions to this project are welcome. If you find any issues, have suggestions, or want to add new features, feel free to open an issue or submit a pull request.
+This project is just an example to be studied and is not open to external contributions. But if you have any questions or suggestions, feel free to get in touch.
 
 ## License
 

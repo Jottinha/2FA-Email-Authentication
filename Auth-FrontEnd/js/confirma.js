@@ -1,7 +1,8 @@
+var codigoEnviado;
 
 document.addEventListener('DOMContentLoaded', function() {
-    const email = localStorage.getItem('email');
-    enviarCodigo(email);
+    const emailCache = localStorage.getItem('email');
+    enviarCodigo(emailCache);
 });
 
 // Limpe os dados do localStorage após usá-los (opcional)
@@ -41,10 +42,10 @@ function verificandoCodigo(){
     var quartoCodigo = document.querySelector('input#fourth_number').value;
 
 
-    var teste = primeiroCodigo + segundoCodigo + terceiroCodigo + quartoCodigo;
-    console.log(teste);
-
-    // TODO: O codigo esta funcionando corretamente e agora é implementar alguma mensagem ou tela que o usuario foi corretamente cadastrado
+    var codigoDigitado = primeiroCodigo + segundoCodigo + terceiroCodigo + quartoCodigo;
+    
+    var mensagemParaUsuario = (codigoDigitado == codigoEnviado) ? "Logado!" : "Codigo errado!";
+    mensagemConfirmacao(mensagemParaUsuario);
 }
 
 async function enviarCodigo(emailInput){
@@ -60,10 +61,14 @@ async function enviarCodigo(emailInput){
             body: JSON.stringify(envioCodigo)
         });
 
-        return await response.json();
+        codigoEnviado = await response.json();
     } catch (error) {
         console.error('Ocorreu um erro:', error);
     }
 
+}
+
+function mensagemConfirmacao(mensagem){
+    document.querySelector("h3.mensagem").innerHTML = mensagem;
 }
   

@@ -86,3 +86,9 @@ h1 {
     cursor: pointer;
 }
 
+.mensagem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

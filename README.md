@@ -33,7 +33,7 @@ User authentication page
 - [x] Style css to the html authentication page.
 - [x] Function that checks if the user input code matches the sent email code.
 - [x] Function that send a request to the back-end to send an email.
-- [ ] Create a confirm text or a new page to show on screen that user made login.
+- [x] Create a confirm text or a new page to show on screen that user made register.
 
 
 ### Back-End
@@ -43,6 +43,9 @@ User authentication page
 - [x] Config swagger in back-end.
 - [x] Create encryption to save passwords in dataBase.
 - [x] Create methods to send an e-mail authentication to the user.
+
+### Bugs
+- [ ] When authetication page refresh, a new code is sent to the email user.
 
 ## Technologies Used
 

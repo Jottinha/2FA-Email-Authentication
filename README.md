@@ -5,8 +5,10 @@
 
 This is a personal study project to create an email authentication system, including registration and login screens. The goal is to develop both the front-end and back-end of the system.
 
-<img  src="https://github.com/Jottinha/auth/assets/69482936/0c332a9e-89a4-4d14-a79d-ac8553ccdb83"  alt="Log in page"  width="300"  height="300">
-<img  src="https://github.com/Jottinha/auth/assets/69482936/9437f239-a953-4dad-8df3-b90177b41a80"  alt="Sing up page"  width="300"  height="300">
+<img  src="https://github.com/Jottinha/2FA-Email-Authentication/assets/69482936/fa70ff1f-5029-4cf3-9f8b-543ea93f0375"  alt="Log in page"  width="300"  height="300">
+<img  src="https://github.com/Jottinha/2FA-Email-Authentication/assets/69482936/f6ed372d-4d9a-4a1e-ab78-0a4084234a57"  alt="Sing up page"  width="300"  height="300">
+<img  src="https://github.com/Jottinha/2FA-Email-Authentication/assets/69482936/70c82565-4069-41fa-a98a-6c2a5e49984b"  alt="Log in page"  width="300"  height="300">
+
 
 ## Implemented Features and Next Steps
 

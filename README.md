@@ -17,7 +17,7 @@ This is a personal study project to create an email authentication system, inclu
 ## Implemented Features and Next Steps
 
 ### Front-End
-- [ ] Make the login, register and authenticate pages recursive.
+- [x] Make the login, register and authenticate pages recursive.
 
 User registration page
 

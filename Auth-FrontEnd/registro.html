@@ -1,40 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registro</title>
-    <link rel="stylesheet" type="text/css" href="/css/registro.css" />
+    <link rel="stylesheet" type="text/css" href="css/registro.css" />
     <script src="js/registro.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="form-box">
-        <section class="first_content">
-            <h1>Registro</h1>
-            
-            <div class="input_content">
-                <input type="text" name="email" id="email_input" placeholder="Email" autocomplete="off">
-                <ion-icon name="mail-outline"></ion-icon>
-            </div>
+      <section class="first_content">
+        <h1>Registro</h1>
 
-            <div class="input_content">
-                <input type="password" name="password" id="Password_input"  placeholder="Password">
-            </div>
-            <div class="input_content">
-                <input type="password" name="password" id="Confirm_password_input"  placeholder="Confirm password">
-            </div>
-            <div class="errado">
-                <p id="mensagem_erro"></p>
-            </div>
-        </section>
+        <div class="input_content">
+          <input
+            type="text"
+            name="email"
+            id="email_input"
+            placeholder="Email"
+            autocomplete="off"
+          />
+          <ion-icon name="mail-outline"></ion-icon>
+        </div>
 
-        <section class="second_content">
-            <button onclick="verificaRegistro()">Register</button>
+        <div class="input_content">
+          <input
+            type="password"
+            name="password"
+            id="Password_input"
+            placeholder="Password"
+          />
+        </div>
+        <div class="input_content">
+          <input
+            type="password"
+            name="password"
+            id="Confirm_password_input"
+            placeholder="Confirm password"
+          />
+        </div>
+        <div class="errado">
+          <p id="mensagem_erro"></p>
+        </div>
+      </section>
 
-            <div class="register">
-                <p>Already registered? <a href="index.html">login</a></p>
-            </div>
-        </section>
+      <section class="second_content">
+        <button onclick="verificaRegistro()">Register</button>
+
+        <div class="register">
+          <p>Already registered? <a href="index.html">login</a></p>
+        </div>
+      </section>
     </div>
-</body>
+  </body>
 </html>

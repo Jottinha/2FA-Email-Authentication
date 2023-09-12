@@ -1,121 +1,119 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url(../assets/imagemFundo.jpg);
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../assets/imagemFundo.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  background-attachment: fixed;
 }
 
 .form-box {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgb(217, 217, 217, 0.2);
-    border: 2px solid #F2E9E9;
-    backdrop-filter: blur(5px);
-    border-radius: 20px;
-    height: 400px;
-    width: 400px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(217, 217, 217, 0.2);
+  border: 2px solid #f2e9e9;
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  height: 400px;
+  width: 400px;
 }
 
 h1 {
-    font-size: 2em;
-    color: #fff;
-    text-align: center;
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
 }
 
 .input_content {
-    margin: 30px;
-    position: relative;
-    width: 300px;
-    border-bottom: 2px solid #fff;
+  margin: 30px;
+  position: relative;
+  width: 300px;
+  border-bottom: 2px solid #fff;
 }
 
-.input_content input{
-    background-color: transparent;
-    border: none;
-    outline: 0;
-    color: #fff;
-    width: 93%;
+.input_content input {
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  color: #fff;
+  width: 93%;
 }
 
-.input_content input::placeholder{
-    color: #fff;
+.input_content input::placeholder {
+  color: #fff;
 }
-
 
 #icon_password:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.second_content button{
-    width: 100%;
-    border-radius: 40px;
-    height: 40px;
-    border: none;
-    margin-bottom: 10%;
+.second_content button {
+  width: 100%;
+  border-radius: 40px;
+  height: 40px;
+  border: none;
+  margin-bottom: 10%;
 }
 
-.second_content button:hover{
-    transform: scale(1.1);
-    transition: all 0.5s;
-    cursor: pointer;
+.second_content button:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
+  cursor: pointer;
 }
-.register{
-    color: #fff;
+.register {
+  color: #fff;
 }
 
 a {
-    color: #fff;
-    font-weight: 600;
+  color: #fff;
+  font-weight: 600;
 }
 
 .register a:hover {
-    text-decoration: underline;
-    color: black;
+  text-decoration: underline;
+  color: black;
 }
 
 .errado {
-    width: 100%;
-    color: rgb(255, 0, 0);
-    position: relative;
+  width: 100%;
+  color: rgb(255, 0, 0);
+  position: relative;
 }
 
 .errado p {
-    display: flex;
-    justify-content: center;
-    white-space: nowrap;
-    margin-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  margin-bottom: 5%;
 }
 
-.second_content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    width: 55%;
-   
+.second_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  width: 55%;
 }
 
-
-
-  
-
-  
-  
-  
-  
+@media screen and (max-width: 400px) {
+  body {
+    min-width: 400px;
+  }
+}
